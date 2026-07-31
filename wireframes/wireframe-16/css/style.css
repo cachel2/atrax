@@ -1,0 +1,230 @@
+/* ============================================================
+   Atrax — Estilos compartidos de pantallas del CLIENTE (móvil)
+   (Acceso, Menú disponible, Armar pedido, Seguimiento)
+   Implementación solo visual: HTML + CSS, sin backend.
+   ============================================================ */
+
+:root {
+  --papel: #fbfaf5;
+  --papel-2: #f3f1e8;
+  --tinta: #2c2a27;
+  --tinta-2: #6c685f;
+  --linea: #d8d4c8;
+  --acento: #d56f3e;
+  --acento-oscuro: #b85a2e;
+  --acento-suave: #f6e3d7;
+  --ok-bg: #dcefdc;
+  --ok-tx: #3d7a3d;
+  --warn-bg: #f8e6c0;
+  --warn-tx: #a5761b;
+  --gris-bg: #e7e4db;
+  --gris-tx: #6c685f;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background: var(--papel-2);
+  color: var(--tinta);
+  min-height: 100vh;
+  padding: 30px 16px;
+}
+
+/* ---------- Contenedor de teléfonos ---------- */
+.phones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.phone-wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.caption { font-size: 14px; color: var(--tinta-2); font-style: italic; }
+
+/* marco del teléfono */
+.phone {
+  width: 340px;
+  background: #fff;
+  border: 2.5px solid var(--tinta);
+  border-radius: 34px;
+  padding: 14px;
+  box-shadow: 0 12px 34px rgba(44, 42, 39, 0.14);
+}
+.notch {
+  width: 120px; height: 6px; border-radius: 6px; background: var(--tinta);
+  margin: 4px auto 14px;
+}
+.screen {
+  background: var(--papel);
+  border-radius: 22px;
+  overflow: hidden;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+}
+.screen-pad { padding: 22px 20px; flex: 1; display: flex; flex-direction: column; }
+
+/* ---------- Encabezado de marca ---------- */
+.brand-head { text-align: center; margin: 18px 0 22px; }
+.logo {
+  width: 66px; height: 66px; margin: 0 auto 12px;
+  border-radius: 22px;
+  background: var(--acento-suave);
+  border: 1.5px solid var(--tinta);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 34px; font-weight: 700;
+}
+.brand-head h1 { font-size: 30px; }
+.brand-head .tagline { font-size: 14px; color: var(--tinta-2); margin-top: 4px; }
+
+/* barra superior de app dentro del móvil */
+.app-bar {
+  display: flex; align-items: center; gap: 10px;
+  padding: 16px 18px;
+  background: var(--papel-2);
+  border-bottom: 1.5px solid var(--linea);
+}
+.app-bar .avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--acento-suave); border: 1.5px solid var(--tinta);
+  display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 14px;
+}
+.app-bar h2 { font-size: 19px; }
+.app-bar .loc { margin-left: auto; font-size: 15px; color: var(--tinta-2); }
+
+.back { font-size: 20px; margin-bottom: 16px; display: inline-block; }
+.screen-title { font-size: 22px; margin-bottom: 18px; }
+
+/* ---------- Campos ---------- */
+.field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.field label { font-size: 14px; color: var(--tinta-2); }
+.field input, .field select {
+  padding: 13px 14px;
+  border: 1.5px solid var(--tinta);
+  border-radius: 12px;
+  font-family: inherit; font-size: 15px;
+  background: #fff; color: var(--tinta);
+}
+.field input:focus, .field select:focus {
+  outline: none; border-color: var(--acento);
+  box-shadow: 0 0 0 3px rgba(213, 111, 62, 0.15);
+}
+.pass-box { position: relative; }
+.pass-box .ver {
+  position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+  border: none; background: none; font-size: 13px; color: var(--tinta-2); cursor: pointer;
+}
+
+/* ---------- Botones ---------- */
+.btn {
+  display: block; width: 100%; padding: 14px; font-size: 16px;
+  text-align: center; border-radius: 12px; cursor: pointer;
+  text-decoration: none; border: 1.5px solid transparent; font-family: inherit;
+}
+.btn-primary { background: var(--acento); color: #fff; border-color: var(--acento-oscuro); font-weight: 600; }
+.btn-primary:hover { background: var(--acento-oscuro); }
+.btn-ghost { background: transparent; color: var(--tinta); border: 1.5px dashed var(--tinta-2); }
+.btn-ghost:hover { background: var(--papel-2); }
+.center-link { display: block; text-align: center; font-size: 14px; color: var(--tinta-2); margin-top: 16px; text-decoration: none; }
+
+/* ---------- Pestañas de modalidad ---------- */
+.seg { display: flex; gap: 10px; margin-bottom: 18px; }
+.seg a, .seg span {
+  padding: 9px 16px; border-radius: 20px; border: 1.5px solid var(--linea);
+  background: #fff; font-size: 14px; color: var(--tinta); cursor: pointer; text-decoration: none;
+}
+.seg .active { background: var(--acento); color: #fff; border-color: var(--acento-oscuro); font-weight: 600; }
+
+/* ---------- Tarjetas de plato ---------- */
+.dish { border: 1.5px solid var(--tinta); border-radius: 16px; overflow: hidden; margin-bottom: 16px; }
+.dish.off { opacity: 0.6; border-color: var(--linea); }
+.dish-photo {
+  min-height: 130px;
+  background: repeating-linear-gradient(45deg, #f4f2ec, #f4f2ec 10px, #faf9f4 10px, #faf9f4 20px);
+  color: var(--tinta-2); font-family: "Courier New", monospace;
+  display: flex; align-items: center; justify-content: center;
+}
+.dish-body { padding: 12px 14px; }
+.dish-body .dish-top { display: flex; align-items: center; gap: 10px; }
+.dish-body h3 { font-size: 18px; }
+.dish-body .price { margin-left: auto; background: var(--acento-suave); border: 1.5px solid var(--acento); color: var(--acento-oscuro); border-radius: 8px; padding: 3px 10px; font-size: 14px; }
+.dish-body .meta { font-size: 13px; color: var(--tinta-2); margin-top: 4px; }
+.tag-off { background: var(--gris-bg); border: 1.5px solid var(--linea); color: var(--gris-tx); border-radius: 8px; padding: 3px 10px; font-size: 13px; margin-left: auto; }
+
+/* ---------- Barra inferior nav ---------- */
+.tabbar {
+  display: flex; border-top: 1.5px solid var(--linea);
+  background: var(--papel-2);
+}
+.tabbar a {
+  flex: 1; text-align: center; padding: 12px 0; font-size: 13px;
+  color: var(--tinta-2); text-decoration: none;
+}
+.tabbar a.active { color: var(--acento-oscuro); font-weight: 600; }
+
+/* ---------- Armar pedido (carrito) ---------- */
+.cart-item {
+  border: 1.5px solid var(--tinta); border-radius: 14px; padding: 14px;
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;
+}
+.cart-item .ci-name { font-weight: 700; }
+.cart-item .ci-days { font-size: 13px; color: var(--tinta-2); margin-top: 2px; }
+.stepper { border: 1.5px solid var(--tinta); border-radius: 20px; padding: 6px 14px; font-size: 15px; white-space: nowrap; }
+.add-line {
+  border: 1.5px dashed var(--tinta); border-radius: 14px; padding: 14px;
+  text-align: center; margin-bottom: 16px; color: var(--tinta);
+}
+.summary { background: var(--papel-2); border: 1.5px solid var(--linea); border-radius: 14px; padding: 16px; margin-bottom: 16px; }
+.summary .s-row { display: flex; justify-content: space-between; font-size: 15px; margin-bottom: 8px; }
+.summary hr { border: none; border-top: 1.5px dashed var(--linea); margin: 10px 0; }
+.summary .total { display: flex; justify-content: space-between; font-size: 20px; font-weight: 700; }
+
+/* confirmación */
+.confirm { text-align: center; padding: 30px 10px; flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.check {
+  width: 76px; height: 76px; border-radius: 50%; border: 3px solid var(--ok-tx);
+  color: var(--ok-tx); font-size: 40px; display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+}
+.confirm h2 { font-size: 26px; margin-bottom: 10px; }
+.confirm p { color: var(--tinta-2); font-size: 15px; }
+.confirm-box { border: 1.5px solid var(--tinta); border-radius: 14px; padding: 16px; margin: 22px 0; text-align: left; }
+.confirm-box .cb-row { display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 15px; }
+.confirm-box .cb-row span:first-child { color: var(--tinta-2); }
+
+/* ---------- Seguimiento (timeline) ---------- */
+.map {
+  min-height: 180px; border: 1.5px dashed var(--linea); border-radius: 14px;
+  background: repeating-linear-gradient(45deg, #f4f2ec, #f4f2ec 10px, #faf9f4 10px, #faf9f4 20px);
+  color: var(--tinta-2); font-family: "Courier New", monospace;
+  display: flex; align-items: center; justify-content: center; text-align: center; margin-bottom: 18px;
+}
+.timeline { border: 1.5px solid var(--tinta); border-radius: 14px; padding: 18px; margin-bottom: 16px; list-style: none; }
+.timeline li { display: flex; gap: 14px; position: relative; padding-bottom: 18px; }
+.timeline li:last-child { padding-bottom: 0; }
+.tl-dot { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--linea); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 13px; color: var(--tinta-2); background: #fff; z-index: 1; }
+.tl-dot.done { background: var(--ok-tx); border-color: var(--ok-tx); color: #fff; }
+.tl-dot.now { border-color: var(--acento); color: var(--acento-oscuro); }
+.timeline li:not(:last-child)::before { content: ""; position: absolute; left: 12px; top: 26px; bottom: 2px; width: 2px; background: var(--linea); }
+.timeline li.done:not(:last-child)::before { background: var(--ok-tx); }
+.timeline li.now:not(:last-child)::before { background: var(--acento); }
+.tl-body .tl-title { font-weight: 700; font-size: 15px; }
+.tl-body .tl-title.now { color: var(--acento-oscuro); }
+.tl-body .tl-sub { font-size: 13px; color: var(--tinta-2); margin-top: 2px; }
+
+/* historial de pedidos */
+.order-card { border: 1.5px solid var(--tinta); border-radius: 14px; padding: 14px; margin-bottom: 12px; }
+.order-card.muted-card { opacity: 0.7; }
+.order-card .oc-top { display: flex; align-items: center; justify-content: space-between; }
+.order-card .oc-name { font-weight: 700; font-size: 15px; }
+.order-card .oc-sub { font-size: 13px; color: var(--tinta-2); margin-top: 4px; }
+
+.badge { display: inline-block; padding: 4px 12px; border-radius: 8px; font-size: 13px; border: 1.5px solid; }
+.badge-ok { background: var(--ok-bg); color: var(--ok-tx); border-color: var(--ok-tx); }
+.badge-acento { background: var(--acento-suave); color: var(--acento-oscuro); border-color: var(--acento); }
+.badge-gris { background: var(--gris-bg); color: var(--gris-tx); border-color: var(--linea); }
+
+@media (max-width: 400px) {
+  .phone { width: 100%; }
+}

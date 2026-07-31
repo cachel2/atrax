@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atrax — Zonas de distribución</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="browser">
+    <div class="chrome">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <div class="urlbar">atrax.uy/admin/zonas</div>
+    </div>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <ul class="nav">
+          <li><a href="#"><span class="ico diamond"></span> Dashboard</a></li>
+          <li><a href="#"><span class="ico square"></span> Pedidos</a></li>
+          <li><a href="#"><span class="ico circle"></span> Stock</a></li>
+          <li><a href="#"><span class="ico square"></span> Distribución</a></li>
+          <li><a href="#"><span class="ico square"></span> Menús y precios</a></li>
+          <li><a class="active" href="#"><span class="ico square"></span> Zonas</a></li>
+          <li><a href="#"><span class="ico square"></span> Vehículos</a></li>
+        </ul>
+      </aside>
+
+      <main class="main">
+        <div class="page-head">
+          <h1>Zonas de distribución</h1>
+          <button class="btn btn-primary">+ Nueva zona</button>
+        </div>
+
+        <div class="panels">
+          <div class="placeholder" style="min-height:520px;">[ mapa de Montevideo — zonas coloreadas ]</div>
+
+          <div class="table-card">
+            <table class="table">
+              <thead>
+                <tr><th>Zona</th><th>Cobertura</th><th>Vehíc.</th><th></th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="strong">Z1 · Centro</td><td>Cordón, Centro</td><td>2</td><td><a class="link" href="#">editar</a></td></tr>
+                <tr><td class="strong">Z2 · Pocitos</td><td>Pocitos, Punta Carretas</td><td>1</td><td><a class="link" href="#">editar</a></td></tr>
+                <tr><td class="strong">Z3 · Carrasco</td><td>Carrasco, Malvín</td><td>1</td><td><a class="link" href="#">editar</a></td></tr>
+                <tr><td class="strong">Z4 · Prado</td><td>Prado, Capurro</td><td>1</td><td><a class="link" href="#">editar</a></td></tr>
+                <tr><td class="strong">Z5 · Cerro</td><td>Cerro, La Teja</td><td>1</td><td><a class="link" href="#">editar</a></td></tr>
+                <tr><td class="strong">Z6 · Unión</td><td>Unión, Maroñas</td><td>1</td><td><a class="link" href="#">editar</a></td></tr>
+                <tr><td class="strong">Z7 · Sayago</td><td>Sayago, Colón</td><td>1</td><td><a class="link" href="#">editar</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="form-panel">
+          <h2>Editar zona — Z2 · Pocitos</h2>
+          <div class="form-grid">
+            <div class="field">
+              <label>Nombre de zona</label>
+              <input type="text" value="Pocitos">
+            </div>
+            <div class="field">
+              <label>Barrios incluidos</label>
+              <input type="text" value="Pocitos, Punta Carretas">
+            </div>
+            <div class="field">
+              <label>Vehículos asignables</label>
+              <select><option>1</option><option>2</option><option>3</option></select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary">Guardar</button>
+            <button class="btn btn-ghost">Cancelar</button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>

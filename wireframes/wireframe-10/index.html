@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atrax — Producción · tickets</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="browser">
+    <div class="chrome">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <div class="urlbar">atrax.uy/operador/produccion</div>
+    </div>
+
+    <div class="topbar">
+      <span class="avatar">A</span>
+      <span class="brand">Producción</span>
+      <span class="spacer"></span>
+      <div class="tabs">
+        <a class="pill dashed" href="#">Hoy 04/06 ▾</a>
+        <button class="btn btn-primary btn-sm">🖨 Imprimir todos</button>
+      </div>
+    </div>
+
+    <main class="main">
+      <div class="tabs" style="display:flex;gap:10px;margin-bottom:20px;">
+        <a class="pill filter active" href="#">Todos</a>
+        <a class="pill filter" href="#">Pendientes</a>
+        <a class="pill filter" href="#">En curso</a>
+        <a class="pill filter" href="#">Listos</a>
+      </div>
+
+      <div class="ticket-grid">
+        <div class="ticket">
+          <div class="tk-top"><span>TICKET #T-0142</span><span class="badge badge-warn">en curso</span></div>
+          <h3>Milanesa + ensalada</h3>
+          <div class="row"><span class="muted">Cantidad</span><span class="qty">38</span></div>
+          <div class="full-bar"></div>
+          <p class="note">insumos: pan, carne, lechuga…</p>
+          <button class="btn btn-outline btn-block">Marcar como listo</button>
+        </div>
+
+        <div class="ticket">
+          <div class="tk-top"><span>TICKET #T-0143</span><span class="badge badge-ok">listo</span></div>
+          <h3>Pollo grillado + puré</h3>
+          <div class="row"><span class="muted">Cantidad</span><span class="qty">34</span></div>
+          <div class="full-bar"></div>
+          <p class="note">→ pasa a stock (lote nuevo)</p>
+          <button class="btn btn-ghost btn-block">Reabrir</button>
+        </div>
+
+        <div class="ticket">
+          <div class="tk-top"><span>TICKET #T-0144</span><span class="badge badge-gris">pendiente</span></div>
+          <h3>Tarta de verdura</h3>
+          <div class="row"><span class="muted">Cantidad</span><span class="qty">28</span></div>
+          <div class="full-bar"></div>
+          <p class="note">insumos: masa, acelga, huevo…</p>
+          <button class="btn btn-primary btn-block">Empezar</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

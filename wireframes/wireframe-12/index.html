@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atrax — Distribución por zonas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="browser">
+    <div class="chrome">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <div class="urlbar">atrax.uy/operador/distribucion</div>
+    </div>
+
+    <div class="topbar">
+      <span class="avatar">A</span>
+      <span class="brand">Distribución</span>
+      <span class="spacer"></span>
+      <div class="tabs">
+        <a class="pill dashed" href="#">Hoy ▾</a>
+        <button class="btn btn-primary btn-sm">Confirmar reparto</button>
+      </div>
+    </div>
+
+    <main class="main">
+      <div class="dist-layout">
+        <div>
+          <h2 style="margin-bottom:14px;">Pedidos sin asignar</h2>
+          <div class="unassigned">
+            <div class="order-chip">
+              <div><div class="oc-title">#P-2044 · Z3</div><div class="oc-sub">Carrasco · 3 platos</div></div>
+              <span class="oc-qty">8</span>
+            </div>
+            <div class="order-chip">
+              <div><div class="oc-title">#P-2045 · Z6</div><div class="oc-sub">Unión · 4 platos</div></div>
+              <span class="oc-qty">9</span>
+            </div>
+            <div class="order-chip">
+              <div><div class="oc-title">#P-2047 · Z1</div><div class="oc-sub">Centro · 2 platos</div></div>
+              <span class="oc-qty">6</span>
+            </div>
+          </div>
+          <p class="hint-note">✱ Arrastrar a un vehículo →</p>
+        </div>
+
+        <div class="vehicle-grid">
+          <div class="vehicle">
+            <div class="v-head"><h3>Furgón 1 · Z1</h3><span class="badge badge-ok">disponible</span></div>
+            <div class="v-cap">Carga: 24 / 60 viandas</div>
+            <div class="progress"><span style="width:40%"></span></div>
+            <div class="assigned">
+              <span class="a-item">#P-2031 · 12</span>
+              <span class="a-item">#P-2038 · 12</span>
+            </div>
+          </div>
+
+          <div class="vehicle">
+            <div class="v-head"><h3>Furgón 2 · Z2</h3><span class="badge badge-acento">en ruta</span></div>
+            <div class="v-cap">Carga: 54 / 60 viandas</div>
+            <div class="progress"><span style="width:90%"></span></div>
+            <div class="assigned">
+              <span class="a-item">#P-2030 · 18</span>
+              <span class="a-item">#P-2033 · 18</span>
+              <span class="a-item">#P-2041 · 18</span>
+            </div>
+          </div>
+
+          <div class="vehicle">
+            <div class="v-head"><h3>Moto 1 · Z3</h3><span class="badge badge-ok">disponible</span></div>
+            <div class="v-cap">Carga: 0 / 18 viandas</div>
+            <div class="progress"><span style="width:0"></span></div>
+            <div class="dropzone">soltar pedidos de Z3 aquí</div>
+          </div>
+
+          <div class="vehicle full">
+            <div class="v-head"><h3>Moto 2 · Z6</h3><span class="badge badge-warn">capacidad llena</span></div>
+            <div class="v-cap">Carga: 18 / 18 viandas</div>
+            <div class="progress"><span class="warn" style="width:100%"></span></div>
+            <div class="assigned">
+              <span class="a-item">#P-2045 · 9</span>
+              <span class="a-item">#P-2046 · 9</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

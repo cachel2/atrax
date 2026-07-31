@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atrax — Estadísticas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="browser">
+    <div class="chrome">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <div class="urlbar">atrax.uy/admin/estadisticas</div>
+    </div>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <ul class="nav">
+          <li><a href="#"><span class="ico diamond"></span> Dashboard</a></li>
+          <li><a href="#"><span class="ico circle"></span> Stock</a></li>
+          <li><a class="active" href="#"><span class="ico square"></span> Estadísticas</a></li>
+        </ul>
+      </aside>
+
+      <main class="main">
+        <div class="page-head">
+          <h1>Estadísticas</h1>
+          <div class="head-actions">
+            <button class="btn btn-ghost btn-sm">Últimos 30 días ▾</button>
+            <button class="btn btn-ghost btn-sm">Exportar ↓</button>
+          </div>
+        </div>
+
+        <div class="panels">
+          <div class="panel">
+            <div class="panel-head"><h2>Demanda por mes</h2></div>
+            <div class="placeholder">[ gráfico de líneas — verano: ensaladas ▲ · invierno: comidas calientes ▲ ]</div>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><h2>Pedidos por zona</h2></div>
+            <div class="placeholder">[ barras horizontales Z1–Z7 ]</div>
+          </div>
+        </div>
+
+        <div class="stat-grid" style="grid-template-columns:repeat(3,1fr);margin-top:16px;">
+          <div class="stat">
+            <div class="label">Plato más pedido</div>
+            <div class="num" style="font-size:26px;">Milanesa</div>
+            <div class="foot">18% de los pedidos</div>
+          </div>
+          <div class="stat">
+            <div class="label">Merma por vencim.</div>
+            <div class="num" style="font-size:26px;">2,1%</div>
+            <div class="foot">▼ vs mes anterior</div>
+          </div>
+          <div class="stat">
+            <div class="label">Entrega a tiempo</div>
+            <div class="num" style="font-size:26px;">94%</div>
+            <div class="foot">objetivo 95%</div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>

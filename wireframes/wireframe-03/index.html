@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atrax — Dashboard del administrador</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="browser">
+    <div class="chrome">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <div class="urlbar">atrax.uy/admin</div>
+    </div>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <ul class="nav">
+          <li><a class="active" href="#"><span class="ico diamond"></span> Dashboard</a></li>
+          <li><a href="#"><span class="ico square"></span> Pedidos</a></li>
+          <li><a href="#"><span class="ico circle"></span> Stock</a></li>
+          <li><a href="#"><span class="ico square"></span> Distribución</a></li>
+          <li><a href="#"><span class="ico square"></span> Menús y precios</a></li>
+          <li><a href="#"><span class="ico square"></span> Zonas</a></li>
+          <li><a href="#"><span class="ico square"></span> Vehículos</a></li>
+          <li><a href="#"><span class="ico square"></span> Estadísticas</a></li>
+          <li><a href="#"><span class="ico square"></span> Usuarios</a></li>
+        </ul>
+      </aside>
+
+      <main class="main">
+        <div class="page-head">
+          <div>
+            <h1 class="greet">Hola, Kiara 👋</h1>
+            <p class="greet-sub">Resumen de hoy · Lunes 04/06</p>
+          </div>
+          <div class="head-actions">
+            <button class="btn btn-ghost btn-sm">Hoy ▾</button>
+            <span class="avatar">K</span>
+          </div>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat">
+            <div class="label">Pedidos hoy</div>
+            <div class="num">128</div>
+            <div class="foot">▲ 12 vs ayer</div>
+          </div>
+          <div class="stat">
+            <div class="label">Viandas a producir</div>
+            <div class="num">142</div>
+            <div class="foot">para 7 zonas</div>
+          </div>
+          <div class="stat">
+            <div class="label">En reparto</div>
+            <div class="num">63</div>
+            <div class="foot">4 vehículos activos</div>
+          </div>
+          <div class="stat alert">
+            <div class="label">Alertas de stock</div>
+            <div class="num">3</div>
+            <div class="foot">bajo el mínimo</div>
+          </div>
+        </div>
+
+        <div class="panels">
+          <div class="panel">
+            <div class="panel-head">
+              <h2>Producción y entregas (hoy)</h2>
+              <span class="hint">por hora</span>
+            </div>
+            <div class="placeholder">[ gráfico de barras — producidas vs despachadas vs entregadas ]</div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head"><h2>Alertas</h2></div>
+            <ul class="alert-list">
+              <li>Pollo grillado <span class="badge badge-warn">8 / mín 15</span></li>
+              <li>Ensalada quinoa <span class="badge badge-warn">5 / mín 12</span></li>
+              <li>Tarta de verdura <span class="badge badge-acento">vence hoy</span></li>
+            </ul>
+            <div class="bar-empty"></div>
+            <div class="bar-empty"></div>
+            <a class="btn btn-ghost" href="#" style="width:100%;text-align:center;margin-top:12px;">Ver todo el stock</a>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atrax — Menús y precios</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="browser">
+    <div class="chrome">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <div class="urlbar">atrax.uy/admin/menus</div>
+    </div>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <ul class="nav">
+          <li><a href="#"><span class="ico diamond"></span> Dashboard</a></li>
+          <li><a href="#"><span class="ico circle"></span> Stock</a></li>
+          <li><a class="active" href="#"><span class="ico square"></span> Menús y precios</a></li>
+          <li><a href="#"><span class="ico square"></span> Zonas</a></li>
+        </ul>
+      </aside>
+
+      <main class="main">
+        <div class="page-head">
+          <h1>Menús y precios</h1>
+          <div class="tabs">
+            <a class="tab active" href="#">Semanal</a>
+            <a class="tab" href="#">Quincenal</a>
+            <a class="tab" href="#">Mensual</a>
+          </div>
+        </div>
+
+        <div class="plan-grid">
+          <div class="plan-card">
+            <div class="plan-photo">[ foto plato ]</div>
+            <h3>Plan Semanal</h3>
+            <p class="plan-sub">5 viandas · lun a vie</p>
+            <div class="plan-row"><span>Precio</span><input class="price-input" value="$ 2.450"></div>
+            <div class="plan-row"><span>Activo</span><button class="switch" aria-label="activo"></button></div>
+          </div>
+          <div class="plan-card">
+            <div class="plan-photo">[ foto plato ]</div>
+            <h3>Plan Quincenal</h3>
+            <p class="plan-sub">10 viandas · 2 semanas</p>
+            <div class="plan-row"><span>Precio</span><input class="price-input" value="$ 4.600"></div>
+            <div class="plan-row"><span>Activo</span><button class="switch" aria-label="activo"></button></div>
+          </div>
+          <div class="plan-card">
+            <div class="plan-photo">[ foto plato ]</div>
+            <h3>Plan Mensual</h3>
+            <p class="plan-sub">20 viandas · mes</p>
+            <div class="plan-row"><span>Precio</span><input class="price-input" value="$ 8.700"></div>
+            <div class="plan-row"><span>Activo</span><button class="switch" aria-label="activo"></button></div>
+          </div>
+        </div>
+
+        <div class="form-panel">
+          <div class="panel-head"><h2>Platos del menú semanal</h2>
+            <button class="btn btn-ghost btn-sm">+ Agregar plato</button>
+          </div>
+          <div class="chips">
+            <span class="chip">Pollo grillado</span>
+            <span class="chip">Milanesa + ens.</span>
+            <span class="chip">Tarta de verdura</span>
+            <span class="chip">Quinoa</span>
+            <span class="chip">Wok veg.</span>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>

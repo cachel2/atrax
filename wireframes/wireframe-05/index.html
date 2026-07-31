@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atrax — Vehículos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="browser">
+    <div class="chrome">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <div class="urlbar">atrax.uy/admin/vehiculos</div>
+    </div>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <ul class="nav">
+          <li><a href="#"><span class="ico diamond"></span> Dashboard</a></li>
+          <li><a href="#"><span class="ico circle"></span> Stock</a></li>
+          <li><a href="#"><span class="ico square"></span> Distribución</a></li>
+          <li><a href="#"><span class="ico square"></span> Zonas</a></li>
+          <li><a class="active" href="#"><span class="ico square"></span> Vehículos</a></li>
+        </ul>
+      </aside>
+
+      <main class="main">
+        <div class="page-head">
+          <h1>Vehículos de reparto</h1>
+          <button class="btn btn-primary">+ Agregar vehículo</button>
+        </div>
+
+        <div class="table-card">
+          <table class="table">
+            <thead>
+              <tr><th>Vehículo</th><th>Patrón</th><th>Capacidad (viandas)</th><th>Zona habitual</th><th>Estado</th><th></th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="strong">Furgón 1</td><td>ABC 1234</td><td>60</td><td>Z1 · Centro</td><td><span class="badge badge-ok">disponible</span></td><td><a class="link" href="#">editar</a></td></tr>
+              <tr><td class="strong">Furgón 2</td><td>ABC 5678</td><td>60</td><td>Z2 · Pocitos</td><td><span class="badge badge-acento">en ruta</span></td><td><a class="link" href="#">editar</a></td></tr>
+              <tr><td class="strong">Moto 1</td><td>XY 9012</td><td>18</td><td>Z3 · Carrasco</td><td><span class="badge badge-ok">disponible</span></td><td><a class="link" href="#">editar</a></td></tr>
+              <tr><td class="strong">Moto 2</td><td>XY 3456</td><td>18</td><td>Z6 · Unión</td><td><span class="badge badge-gris">mantenim.</span></td><td><a class="link" href="#">editar</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="form-panel">
+          <h2>Nuevo vehículo</h2>
+          <div class="form-grid" style="grid-template-columns:1fr 1fr;">
+            <div class="field"><label>Nombre / identificador</label><input type="text"></div>
+            <div class="field"><label>Matrícula</label><input type="text"></div>
+            <div class="field"><label>Capacidad de carga (viandas)</label><input type="text"></div>
+            <div class="field"><label>Zona habitual</label>
+              <select><option>Seleccionar</option><option>Z1 · Centro</option><option>Z2 · Pocitos</option></select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary">Guardar vehículo</button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>

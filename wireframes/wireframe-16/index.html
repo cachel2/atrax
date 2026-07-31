@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atrax — Seguimiento del pedido</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="phones">
+
+    <!-- Estado en vivo -->
+    <div class="phone-wrap">
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="screen">
+          <div class="screen-pad">
+            <a class="back" href="#">← Pedido #P-2048</a>
+
+            <div class="map">[ mapa — vehículo en camino a Pocitos ]</div>
+
+            <ul class="timeline">
+              <li class="done">
+                <span class="tl-dot done">✓</span>
+                <div class="tl-body"><div class="tl-title">Pedido recibido</div><div class="tl-sub">09/06 · 08:10</div></div>
+              </li>
+              <li class="done">
+                <span class="tl-dot done">✓</span>
+                <div class="tl-body"><div class="tl-title">En preparación</div><div class="tl-sub">09/06 · 09:30</div></div>
+              </li>
+              <li class="now">
+                <span class="tl-dot now">◉</span>
+                <div class="tl-body"><div class="tl-title now">En reparto</div><div class="tl-sub">Furgón 2 · llega ~11:15</div></div>
+              </li>
+              <li>
+                <span class="tl-dot">4</span>
+                <div class="tl-body"><div class="tl-title">Entregado</div></div>
+              </li>
+            </ul>
+
+            <a class="btn btn-ghost" href="#">Contactar soporte</a>
+          </div>
+        </div>
+      </div>
+      <span class="caption">Estado en vivo</span>
+    </div>
+
+    <!-- Historial de pedidos -->
+    <div class="phone-wrap">
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="screen">
+          <div class="app-bar">
+            <span class="avatar">A</span>
+            <h2>Mis pedidos</h2>
+          </div>
+
+          <div class="screen-pad">
+            <div class="order-card">
+              <div class="oc-top"><span class="oc-name">#P-2048 · Semanal</span><span class="badge badge-acento">en reparto</span></div>
+              <p class="oc-sub">Llega hoy ~11:15</p>
+            </div>
+            <div class="order-card">
+              <div class="oc-top"><span class="oc-name">#P-2012 · Semanal</span><span class="badge badge-ok">entregado</span></div>
+              <p class="oc-sub">02/06 · valorá tu pedido ★</p>
+            </div>
+            <div class="order-card muted-card">
+              <div class="oc-top"><span class="oc-name">#P-1990 · Quincenal</span><span class="badge badge-gris">entregado</span></div>
+              <p class="oc-sub">19/05</p>
+            </div>
+
+            <a class="btn btn-primary" href="#" style="margin-top:6px;">+ Nuevo pedido</a>
+          </div>
+
+          <nav class="tabbar">
+            <a href="#">Menú</a>
+            <a class="active" href="#">Mis pedidos</a>
+            <a href="#">Perfil</a>
+          </nav>
+        </div>
+      </div>
+      <span class="caption">Historial de pedidos</span>
+    </div>
+
+  </div>
+
+</body>
+</html>

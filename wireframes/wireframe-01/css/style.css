@@ -1,0 +1,249 @@
+/* ============================================================
+   Atrax — Pantalla de login (Pantalla 01 del diseño)
+   Implementación solo visual: HTML + CSS, sin backend.
+   Paleta basada en los wireframes: papel claro + acento terracota.
+   ============================================================ */
+
+:root {
+  --papel: #fbfaf5;        /* fondo general */
+  --papel-2: #f3f1e8;      /* fondo secundario */
+  --tinta: #2c2a27;        /* texto principal */
+  --tinta-2: #6c685f;      /* texto secundario */
+  --linea: #d8d4c8;        /* bordes suaves */
+  --acento: #d56f3e;       /* terracota: acción primaria */
+  --acento-oscuro: #b85a2e;
+  --error: #c0392b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background: var(--papel-2);
+  color: var(--tinta);
+  min-height: 100vh;
+}
+
+/* ---------- Estructura general ---------- */
+
+.login-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border: 1px solid var(--linea);
+  border-radius: 14px;
+  padding: 32px 28px;
+  box-shadow: 0 6px 18px rgba(44, 42, 39, 0.08);
+}
+
+/* ---------- Encabezado: logo y marca ---------- */
+
+.login-head {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.logo {
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 8px;
+  border: 2.5px solid var(--tinta);
+  border-radius: 50% 30% 50% 30%;
+  background: #f6e3d7;
+  font-size: 26px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-head h1 {
+  font-size: 26px;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--tinta-2);
+  margin-top: 2px;
+}
+
+/* ---------- Campos del formulario ---------- */
+
+.field {
+  margin-bottom: 16px;
+}
+
+.field label {
+  display: block;
+  font-size: 14px;
+  color: var(--tinta-2);
+  margin-bottom: 5px;
+}
+
+.field input[type="text"],
+.field input[type="password"] {
+  width: 100%;
+  padding: 11px 12px;
+  font-size: 15px;
+  border: 1.5px solid var(--linea);
+  border-radius: 9px;
+  background: #fff;
+  color: var(--tinta);
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--acento);
+  box-shadow: 0 0 0 3px rgba(213, 111, 62, 0.15);
+}
+
+/* contraseña con botón "ver" adentro */
+.pass-box {
+  position: relative;
+}
+
+.pass-box input {
+  padding-right: 48px;
+}
+
+.pass-box .ver {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  font-size: 12px;
+  color: var(--tinta-2);
+  cursor: pointer;
+  text-transform: lowercase;
+}
+
+/* Mensaje de error inline: aparece bajo el campo, sin recargar.
+   (Oculto por defecto; con backend real se mostraría al validar.) */
+.error {
+  display: none;
+  font-size: 12.5px;
+  color: var(--error);
+  margin-top: 4px;
+}
+
+.field.invalido input {
+  border-color: var(--error);
+}
+
+.field.invalido .error {
+  display: block;
+}
+
+/* ---------- Opciones: recordarme / olvidé ---------- */
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13.5px;
+  color: var(--tinta-2);
+  margin: 4px 0 18px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.olvide {
+  color: var(--tinta-2);
+  text-decoration: none;
+}
+
+.olvide:hover {
+  color: var(--acento-oscuro);
+  text-decoration: underline;
+}
+
+/* ---------- Botones ---------- */
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primario {
+  background: var(--acento);
+  color: #fff;
+  border: 1.5px solid var(--acento-oscuro);
+  font-weight: 600;
+}
+
+.btn-primario:hover {
+  background: var(--acento-oscuro);
+}
+
+.btn-secundario {
+  background: transparent;
+  color: var(--tinta);
+  border: 1.5px dashed var(--tinta-2);
+}
+
+.btn-secundario:hover {
+  background: var(--papel);
+}
+
+/* ---------- Divisor "o" ---------- */
+
+.divisor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 0;
+  color: var(--tinta-2);
+  font-size: 12px;
+}
+
+.divisor::before,
+.divisor::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--linea);
+}
+
+/* ---------- Pie ---------- */
+
+.login-foot {
+  margin-top: 18px;
+  font-size: 12px;
+  color: var(--tinta-2);
+  text-align: center;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 420px) {
+  .login-card {
+    padding: 24px 18px;
+  }
+}
