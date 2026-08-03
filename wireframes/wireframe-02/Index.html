@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atrax — Registro</title>
+
+</head>
+<body>
+    
+    <main class="Register-wrap">
+
+        <section class="Register-card">
+
+            <header class="register-head"> 
+                <h1>Crear cuenta</h1>
+                <p class="subtitle">Completa tus datos para empezar a pedir</p>
+            </header>
+
+            <form class="Register-form" action="#" method="post" novalidate></form>
+
+                <!-- Nombre -->
+                <div class="field">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name"
+                        placeholder="Julio" required>
+                </div>
+
+                <!-- Apellido -->
+                <div class="field">
+                    <label for="surname">Apellido</label>
+                    <input type="text" id="surname" name="surname"
+                        placeholder="Trump" required>
+                </div>
+
+                <!-- Correo -->
+                <div class="field">
+                    <label for="email">Correo electrónico</label>
+                    <input type="text" id="email" name="email"
+                        placeholder="JTrump@gmail.com" required>
+                    <span class="error" id="error-email">Este correo ya esta en uso</span>
+                </div>
+
+                <!-- Telefono -->
+                <div class="field">
+                    <label for="phone">Teléfono</label>
+                    <input type="text" id="phone" name="phone"
+                        placeholder="+598 99 123 456" required>
+                    <span class="error" id="error-phone">Numero de telefono invalido</span>
+                </div>
+
+                <!-- Dirrecion -->
+                <div class="field">
+                    <label for="Direction">Dirección</label>
+                    <input type="text" id="Direction" name="Direction"
+                        placeholder="Avenida 18 de Julio 1250" required>
+                </div>
+
+                <!-- Zona -->
+                <div class="field">
+                    <label for="Zone">Zona</label>
+                    <input type="text" id="Zone" name="Zone"
+                        placeholder="Centro" required>
+                </div>
+                <!-- Contraseña -->
+                <div class="field">
+                    <label for="Password">Contraseña</label>
+                    <input type="password" id="Password" name="Password"
+                        placeholder="••••••••" required>
+                    <button type="button" class="ver" aria-label="Mostrar contraseña">ver</button>
+                </div>
+                
+                <!-- Repetir contraseña -->
+                <div class="field">
+                    <label for="RepeatPassword">Repetir contraseña</label>
+                    <input type="password" id="RepeatPassword" name="RepeatPassword"
+                        placeholder="••••••••" required>
+                </div>
+        </section>
+    </main>
+</body>
+</html>
